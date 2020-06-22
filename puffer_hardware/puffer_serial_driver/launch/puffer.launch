@@ -1,0 +1,15 @@
+<launch>
+	<rosparam file="$(find puffer_serial_driver)/config/puffer.yaml" />
+	
+	<node name="puffer" pkg="puffer_serial_driver" type="puffer.py" 
+		respawn="true" output="screen" respawn_delay="1" />
+		
+	<node name="dualshock" pkg="puffer_serial_driver" type="dualshock.py" 
+		respawn="true" output="screen" respawn_delay="1" />
+		
+	<node name="joy_node" type="joy_node" pkg="joy" respawn="false">
+		<param name="autorepeat_rate" 	value="1.0"/>
+		<param name="coalesce_interval" value="0.05"/>
+	</node>
+	
+</launch>

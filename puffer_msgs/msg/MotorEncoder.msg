@@ -1,0 +1,7 @@
+Header header
+
+float64 angular_position_rad
+uint64 angular_position_measurement_time
+
+float64 angular_velocity_rad_s
+uint64 angular_velocity_measurement_time

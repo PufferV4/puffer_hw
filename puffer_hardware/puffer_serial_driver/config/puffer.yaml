@@ -1,0 +1,63 @@
+motor_controllers:
+  baud_rate: 115200
+  serial_device_name: "/dev/ttyTHS1"
+  address: 0x80
+  battery:
+    main:
+      high: 18.0
+      low: 12.0
+    logic:
+      high: 5.5 
+      low: 4.0
+  current:
+    max_amps: 0.28
+  m1:
+    p: 0.12369
+    i: 0.00613
+    d: 0.0
+    qpps: 438000
+  m2:
+    p: 0.16701
+    i: 0.00711
+    d: 0.0
+    qpps: 389062
+
+gpio_pins:
+  e_stop: 18
+  reg_en: 17
+ 
+threadlock:
+  timeout: 0.1
+  
+battery:
+  max_time: 7210
+  max_volts: 16.907
+  a: -610.52
+  b: 20459
+  c: -164420
+  warning_percent: 20
+  shutdown_percent: 8
+
+wheels:
+  diameter: 0.19
+  encoder:
+    cts_per_rev: 512
+    factor: 3.36652
+  gearbox:
+    stage1: 63
+    stage2: 2
+    stage3: 4.444444444444
+
+puffer:
+  rate: 20
+  max_vel_per_s: 0.15
+  accel_const: 10
+  motor_lockout_time: 5
+  
+dualshock:
+  axes:
+    left_control: 1
+    right_control: 5
+  buttons:
+    e_stop: 0
+    fan: 2

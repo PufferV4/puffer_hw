@@ -1,0 +1,2 @@
+puffer_msgs/MotorControllerStatus left_motor_current
+puffer_msgs/MotorControllerStatus right_motor_current
